@@ -64,6 +64,11 @@ namespace borze_reflex_jatek
 
         public static void LoadPlayers()
         {
+            if(!File.Exists(@"players.txt"))
+            {
+                return;
+            }
+
             StreamReader sr = new StreamReader(@"players.txt");
 
             string line;
